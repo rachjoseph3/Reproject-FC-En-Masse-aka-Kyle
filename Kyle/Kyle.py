@@ -11,8 +11,8 @@ import arcpy
 arcpy.env.overwriteOutput = True
 
 #variables
-spatialRef = "102736" #NAD_1983_2011_StatePlane_Tennessee_FIPS_4100_Ft_US
 gdb = arcpy.env.workspace = arcpy.GetParameterAsText(0) #r"D:\ProductionTools\Kyle\TestData\MOBRAN18_TerrainProducts.gdb" #
+spatialRef = arcpy.GetParameterAsText(1) #"6576" #NAD_1983_2011_StatePlane_Tennessee_FIPS_4100_Ft_US
 
 try:
     fileList = arcpy.ListFeatureClasses()
